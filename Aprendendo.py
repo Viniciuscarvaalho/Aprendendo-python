@@ -13,7 +13,7 @@ print(Nome, idade, peso)
 print('Deu tudo certo, agora vamos para a Fase 2')
 print('Fase 2')
 
-pretende = input('Qual a data que vai começar a aprender Python? ')
+pretende = input('Qual a data que vai começar a aprender Inglês ')
 print('Isso aí, o primeiro passo é o maior de todos!')
 
 sonhos = input('Por que está tentando aprender isso? ')
@@ -23,12 +23,35 @@ onde = input('Onde você quer chegar? ')
 print('Acreditamos em você!!')
 
 print('Treine seu inglês')
-
-resposta1 = input('Como se diz "gato" em inglês? ')
+print('Como se diz as seguintes palavras em Inglês!!')
+resposta1 = input('gato')
 
 if resposta1.lower() == 'cat':
     print('Certo!')
 else:
     print('Errado! A resposta correta é "cat".')
+
+resposta2=input('dog')
+if resposta2.lower() == 'dog':
+    print('Certo!')
+else:
+    print('Errado! A resposta correta "dog".')
+
+    resposta3=input('leão')
+    if resposta3.lower() == 'lion':
+        print('Certo!')
+    else:
+        print('Errado! A resposta correta é"lion".')
+
+resposta4=input(Girafa)
+if resposta4.lower() == 'giraffe':
+    print('Certo!')
+else:
+    print('Errado! A resposta correta é "giraffe".')
+    resposta5=input(Lagartixa)
+    if resposta5.lower() == 'lizard':
+        print('Certo!')
+    else:
+        print('errado, a resposta correta é lizard')
 
 print('Parabéns por completar a sua primeira prova!')
