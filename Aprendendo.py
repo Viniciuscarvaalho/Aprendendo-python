@@ -1,26 +1,34 @@
-def main():
-    print("Olá, mundo!")
-    Nome= 'vinicius'
-    idade= '22'
-    peso='53'
-   
-nome=input('qual é o seu nome?')
-print(' Seja bem vindo prazer em te conhecer')
-idade=input(' qual é a sua idade?')
-print('Otimo')
-peso=input(' qual é o seu peso?')
-prentende=input('Qual a data que vai começar a aprender python?')
-print('Isso ai, o primeiro passo é o maior de todos') 
-sonhos=input('Porque esta tentando aprender isso?')
+print('Olá, mundo')
+
+Nome = input('Qual é o seu nome? ')
+print('Prazer em te conhecer', Nome)
+
+idade = input('Qual é a sua idade? ')
+print('Ótimo!')
+
+peso = input('Qual é o seu peso? ')
+print('Confira os seus dados abaixo:')
+print(Nome, idade, peso)
+
+print('Deu tudo certo, agora vamos para a Fase 2')
+print('Fase 2')
+
+pretende = input('Qual a data que vai começar a aprender Python? ')
+print('Isso aí, o primeiro passo é o maior de todos!')
+
+sonhos = input('Por que está tentando aprender isso? ')
 print('Continue!')
-onde=input('Onde você quer chegar?')
-print('Acredito em você!!')
-print('confira os seus dados baixo')
-print(nome, idade, peso)
 
+onde = input('Onde você quer chegar? ')
+print('Acreditamos em você!!')
 
+print('Treine seu inglês')
 
+resposta1 = input('Como se diz "gato" em inglês? ')
 
+if resposta1.lower() == 'cat':
+    print('Certo!')
+else:
+    print('Errado! A resposta correta é "cat".')
 
-if __name__ == "__main__":
-    main()
+print('Parabéns por completar a sua primeira prova!')
