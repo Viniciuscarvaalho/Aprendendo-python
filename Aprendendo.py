@@ -31,7 +31,7 @@ if resposta1.lower() == 'cat':
 else:
     print('Errado! A resposta correta é "cat".')
 
-resposta2=input('dog')
+resposta2=input('Cachorro')
 if resposta2.lower() == 'dog':
     print('Certo!')
 else:
