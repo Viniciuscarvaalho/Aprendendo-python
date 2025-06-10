@@ -21,7 +21,7 @@ print('Continue!')
 
 onde = input('Onde você quer chegar? ')
 print('Acreditamos em você!!')
-
+print('fase 3')
 print('Treine seu inglês')
 print('Como se diz as seguintes palavras em Inglês!!')
 resposta1 = input('gato')
@@ -41,17 +41,37 @@ else:
     if resposta3.lower() == 'lion':
         print('Certo!')
     else:
-        print('Errado! A resposta correta é"lion".')
+        print('Errado! A respossd'
+              'd'
+              'd'
+              'ta correta é"lion".')
+resposta4=input('girafa')
 
-resposta4=input(Girafa)
 if resposta4.lower() == 'giraffe':
     print('Certo!')
 else:
     print('Errado! A resposta correta é "giraffe".')
-    resposta5=input(Lagartixa)
+    resposta5=input('Lagartixa')
     if resposta5.lower() == 'lizard':
         print('Certo!')
     else:
         print('errado, a resposta correta é lizard')
+        print('fase 4')
+        print('forme as seguintes frases')
+        questions = [
+            {"sentence": "I usually _____ coffee in the morning to wake up.", "answer": "drink"},
+            {"sentence": "She was very tired, _____ she went to bed early.", "answer": "so"},
+            {"sentence": "We have been friends _____ childhood.", "answer": "since"},
+            {"sentence": "He _____ his homework before watching TV yesterday.", "answer": "did"},
+            {"sentence": "They _____ to the gym every weekend.", "answer": "go"}
+        ]
+
+        for q in questions:
+            print(q["sentence"])
+            resposta = input("Complete com a palavra correta: ").strip().lower()
+            if resposta == q["answer"]:
+                print("Correto!\n")
+            else:
+                print(f"Errado! A resposta certa é '{q['answer']}'.\n")
 
 print('Parabéns por completar a sua primeira prova!')
