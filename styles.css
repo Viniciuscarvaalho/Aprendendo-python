@@ -1,91 +1,214 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-    list-style:     none ;
-    font-family:font-family: "Montserrat", sans-serif; ; */
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
 }
 
-body{
-    background-color: #0f0f1e ;
-    color: #fff;
-    font-size:25px;
-    overflow: hidden;
-}   
-header{
-    position: fixed;
-    width: 90vw;
-    top: 0%;
-    padding:20px 70px;
-    display: flex;
-    justify-content: space-between ;
-    align-items: center;
-    z-index: 3;
-}
-.logo{
-     font-family: "Orbitron", sans-serif;
-     font-size: 2rem;
-     font-weight: 900;
-     color:#00f7ff;
-     text-shadow:#fc0 1px 0 10px;;   colocar um sombreado em um texto.
+body {
+  background-color: #0f0f1e;
+  color: #fff;
+  font-size: 25px;
+  overflow: hidden;
 }
 
-header nav ul{
-    display: flex;
-    gap:48px
-
+header {
+  position: fixed;
+  width: 90vw;
+  top: 0;
+  padding: 20px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
 }
-header nav ul li{
-    cursor:pointer ;
-    position: relative;
-    padding: 5px 0;
+
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #00f7ff;
+  text-shadow: #fc0 1px 0 10px;
 }
-header nav ul li::after{ 
-        content:'';
-        position: absolute;
-        left:0 ;
-        bottom:0 ;
-        width: 0px;
-        height: 2px;
-        background-color: chartreuse;
-       transition: width 0,1 ease;
 
+header nav ul {
+  display: flex;
+  gap: 48px;
 }
-    header nav ul li:hover::after{
-width:100%}
 
-.container{
-    height: 100vh;
-    position: relative;
-    background: linear-gradient(135deg,#0f0f1e 0%, #1f1f3a);
-    overflow:hidden;
-
+header nav ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 5px 0;
 }
-.container::before{
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    border-radius: 50%;
- background: radial-gradient(circle, rgba(0, 247, 255, 0.2)0% rgba(15, 15,30,0)70%);
- top: 50%;
- left: 50%;
- transform: translate(-50, -50%);
- filter: blur(50px);
- z-index: 1;
- animation: pulse 4s infinite alternate;
+
+header nav ul li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  background-color: chartreuse;
+  transition: width 0.2s ease;
 }
-@keyframes pulse[
-0%{
-opacity: 0,5;
-transform: translate(-50%,-50%) scale(0.8);
+
+header nav ul li:hover::after {
+  width: 100%;
 }
-]
-.list
-    
 
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
 
+.container {
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a);
+  overflow: hidden;
+  padding-top: 100px;
+}
 
+.container::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 247, 255, 0.2) 0%, rgba(15, 15, 30, 0) 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(50px);
+  z-index: 1;
+  animation: pulse 4s infinite alternate;
+}
 
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
 
+.list {
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.item {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.item.active {
+  opacity: 1;
+}
+
+.product-img {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 45%;
+  padding: 20px;
+  z-index: 2;
+}
+
+.product-tag {
+  font-size: 1rem;
+  color: #0ff;
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #00f7ff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  z-index: 2;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+}
+
+.numbers {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: #00f7ff;
+}
