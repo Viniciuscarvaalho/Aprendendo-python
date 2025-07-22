@@ -10,7 +10,7 @@ body {
   background-color: #0f0f1e;
   color: #fff;
   font-size: 25px;
-  overflow: hidden;
+  /* overflow: hidden; */ /* removido para permitir rolagem e visibilidade */
 }
 
 header {
@@ -67,8 +67,9 @@ header nav ul li a {
   height: 100vh;
   position: relative;
   background: linear-gradient(135deg, #0f0f1e 0%, #1f1f3a);
-  overflow: hidden;
+  overflow: visible; /* alterado para permitir visibilidade */
   padding-top: 100px;
+  padding-bottom: 100px; /* espaço para indicadores */
 }
 
 .container::before {
@@ -91,11 +92,10 @@ header nav ul li a {
     opacity: 0.5;
     transform: translate(-50%, -50%) scale(0.8);
   }
-}
-
   100% {
-  opacity: 0.5;
-  transform: translate(-50%, -50%)
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .list {
@@ -103,7 +103,6 @@ header nav ul li a {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  
 }
 
 .item {
@@ -113,7 +112,6 @@ header nav ul li a {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  
 }
 
 .item.active {
@@ -132,20 +130,19 @@ header nav ul li a {
 
 .product-img img {
   max-width: 100%;
-  max-height: 70%; ;
-  filter: drop-shadow (0 0 30px rgba(0,247,255,0.3));
+  max-height: 70%;
+  filter: drop-shadow(0 0 30px rgba(0,247,255,0.3));
 }
 
 .content {
   width: 45%;
   padding-right: 80px;
   display: flex;
-  flex-direction: column; /* NOVO: organiza em coluna */
-  align-items: flex-start; /* alinha os textos à esquerda */
-  justify-content: center; /* centraliza verticalmente */
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   z-index: 2;
 }
-
 
 .product-tag {
   font-size: 1rem;
@@ -154,7 +151,6 @@ header nav ul li a {
   font-weight: 600;
   letter-spacing: 2px;
   margin-bottom: 10px;
-  
 }
 
 .product-name {
@@ -172,6 +168,7 @@ header nav ul li a {
   margin-bottom: 30px;
   max-width: 600px;
 }
+
 .btn {
   padding: 12px 10px;
   background: linear-gradient(90deg, #00f7ff, #0066ff);
@@ -182,53 +179,107 @@ header nav ul li a {
   border: none;
 }
 
-
 .arrows {
   position: absolute;
-  bottom: 40px;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  padding: 0 80px;
-  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
 }
 
-.arrow-btn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
+/* NOVO: centralizar a numeração e os pontos embaixo da tela */
 .indicators {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 10;
 }
 
 .numbers {
-  font-size: 1rem;
-  margin-bottom: 10px;
+  font-family: orbitron, sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+}
+
+.numbers:hover {
+  color: #00f7ff; /* cor acesa */
+  transform: scale(1.1); /* aumenta levemente */
+  cursor: default; /* mantém cursor padrão (ou mude para pointer se quiser clicar) */
 }
 
 .dots {
   display: flex;
-  justify-content: center;
   gap: 10px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #fff;
-  opacity: 0.4;
+  width: 40px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
 }
 
 .dot.active {
-  opacity: 1;
-  background-color: #00f7ff;
+  background-color: crimson;
+  box-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+}
+
+.teche-circle {
+
+  position: absolute;
+  top: 0;
+  left:0 ;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circle {
+
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 247, 255, 0.2);
+}
+
+.circle:nth-child(1){
+
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 10%;
+}
+
+
+.circle:nth-child(2){
+
+  width: 400px;
+  height: 400px;
+  top: 60%;
+  left: 80%;
+}
+
+.circle:nth-child(3){
+
+  width: 150px;
+  height: 150px;
+  top: 80%;
+  left:30%;
+}
+
+.circle:nth-child(4){
+
+  width: 120px;
+  height: 120px;
+  top: 20%;
+  left:70%;
 }
