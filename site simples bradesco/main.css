@@ -1,10 +1,37 @@
+:root {
+    --green: #00ff00;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+.dark-theme {
+    --bg: var(--green);
+    --fontcolor: var(--black);
+    --btnbg: var(--black);
+    --btnfontcolor: var(--white);
+}
+
+.light-theme {
+    --bg: var(--black);
+    --fontcolor: var(--green);
+    --btnbg: var(--white);
+    --btnfontcolor: var(--black);
+}
+
+* {
+    color: var(--fontcolor);
+    font-family: Helvetica, sans-serif;
+}
+
 body {
+    background: var(--bg);
     font-family: monospace;
 }
 
 ul {
-    font-family:  Helvetica ;
+    font-family: Helvetica, sans-serif;
 }
+
 li {
     list-style: circle;
 }
@@ -17,45 +44,19 @@ li {
     font-family: monospace;
 }
 
-.light-theme {
-   --bg:var(--green);
-   --fontcolor: var(--black);
-   --btnbg: var(--black);
-   --btnfontcolor: var(--white);
-}
-
-:root {
-    --green: #00ff00;
-    --white: #ffffff;
-    --black: #000000;
-}
-
-.dark-theme {
-    --bg: var(--black);
-    --fontcolor: var(--green);
-    --btnbg: var(--white);
-    --btnfontcolor: var(--black)
-}
-
-* {
-    color: var(--fontcolor);
-    font-family: helvetica;
-}
-
-body {
-    background: var(--bg);
-}
-
 .btn {
     color: var(--btnfontcolor);
     background-color: var(--btnbg);
     position: absolute;
     top: 20px;
     left: 250px;
-    height:50px ;
+    height: 50px;
     width: 50px;
     border-radius: 50%;
     border: none;
+    font-weight: bold;
 }
 
-.btn: :focus { outline-style: none;}
+.btn:focus {
+    outline-style: none;
+}

@@ -1,16 +1,13 @@
-'use strict'
+'use strict';
 
 const switcher = document.querySelector('.btn');
-switcher.addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme')
 
-    var classname = document.body.className;
-    if(classname=="light-theme") {
-        this.textcontent = "Dark";
-    }
-    else {
-        this.textcontent = "light";
+switcher.addEventListener('click', function () {
+    if (document.body.classList.contains('dark-theme')) {
+        document.body.classList.replace('dark-theme', 'light-theme');
+        this.textContent = "Dark"; // próximo tema
+    } else {
+        document.body.classList.replace('light-theme', 'dark-theme');
+        this.textContent = "Light"; // próximo tema
     }
 });
-
-
